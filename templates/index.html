@@ -17,15 +17,15 @@
 
   <div class="wrapper container-fluid">
     <div class="row justify-content-start" style="margin-left:0px">
-      <div class="you h5">Hello..!</div>
+      <div class="you h5">We act as an mediator between the needy and the donor. We always ensure that every needy gets satisfied. We have helped the sufferers of Kolhapur, Satara and Sangli.</div>
     </div>
     <div class="row justify-content-end" style="margin-right: 0px;">
-      <div class="bot h5">{{val}}</div>
+      <div class="bot h5">{{val|safe}}</div>
     </div>
   </div>
 
   <footer>
-    <form>
+    <form action="/" method="POST">
       <input type="text" id="text" name="text" placeholder="Enter message...">
       <input type="submit" value="Send" class="btn">
     </form>

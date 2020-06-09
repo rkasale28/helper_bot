@@ -14,6 +14,7 @@ def create_app():
   app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://postgres:postgres@127.0.0.1:5432/tourist'
   app.config['SECRET_KEY']='ROHIT'
   app.config['SECURITY_PASSWORD_SALT']='ROHIT'
+  app.config['SECURITY_LOGIN_USER_TEMPLATE']='login.html'
   db.init_app(app)
   migrate.init_app(app,db)
   return app
@@ -54,7 +55,7 @@ def login():
     pwd=request.form['pwd']
     
     user = User.query.filter_by(username = uname).first()
-
+    
     if not user or not verify_password(pwd, user.password):
       flash('Please check your login details and try again.')
       return redirect('/login')
@@ -70,17 +71,20 @@ def logout():
     logout_user()
     return redirect('/login')
 
-@login_required
 @app.route('/', methods = ['POST', 'GET'])
 def index():
-    if request.method == 'GET':
-        val = str(request.args.get('text'))
-        data = json.dumps({"sender": "Rasa","message": val})
-        headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
-        res = requests.post('http://localhost:5005/webhooks/rest/webhook', data= data, headers = headers)
-        res = res.json()
-        val = res[0]['text']
-        return render_template('index.html', val=val)
+    if request.method == 'POST':
+      val = request.form['text']
+      data = json.dumps({"sender": "Rasa","message": val})
+      headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
+      res = requests.post('http://localhost:5005/webhooks/rest/webhook', data= data, headers = headers)
+      res = res.json()
+      val = res[0]['text']
+      val = val.replace("\n","<br>")
+      return render_template('index.html', val=val)
+    else:
+      return render_template('index.html', val='Hello')
+
 
 if __name__ == '__main__':
   manager.run()
