@@ -2,8 +2,6 @@
 - hey
 - hello
 - hi
-- good morning
-- good evening
 - hey there
 
 ## intent:goodbye
@@ -12,45 +10,39 @@
 - see you around
 - see you later
 
-## intent:affirm
-- yes
-- indeed
-- of course
-- that sounds good
-- correct
+## intent:find
+- Please find a help center in Mumbai
+- Can you find a help center in Mumbai?
+- Could you find a help center in Mumbai
+- Where is help center in Mumbai?
+- I want to know about the help center in Mumbai
+- Find a help center in Mumbai
+- Search for a help center in Mumbai
+- Please search a help center in Mumbai
+- Can you search a help center in Mumbai?
+- Could you search a help center in Mumbai
 
-## intent:deny
-- no
-- never
-- I don't think so
-- don't like that
-- no way
-- not really
+## intent:requirements
+- What all is required as of now?
+- Is utensils required?
+- Should I donate utensils?
+- Please tell what all is required
+- I have utensils. Is it required?
+- What all is needed as of now?
+- Is utensils needed?
+- Please tell what all is needed
+- I have utensils. Is it needed?
 
-## intent:mood_great
-- perfect
-- very good
-- great
-- amazing
-- wonderful
-- I am feeling very good
-- I am great
-- I'm good
+## intent:procedure
+- What should I do to donate?
+- I want to donate. Please tell me the procedure.
+- Tell me the procedure to donate
+- I am eager to donate. Please tell me what to do.
+- I want to donate. Please tell me what to do.
 
-## intent:mood_unhappy
-- sad
-- very sad
-- unhappy
-- bad
-- very bad
-- awful
-- terrible
-- not very good
-- extremely sad
-- so sad
-
-## intent:bot_challenge
-- are you a bot?
-- are you a human?
-- am I talking to a bot?
-- am I talking to a human?
+## intent:self
+- Who are you?
+- What do you do?
+- How do you help?
+- Where is this help provided?
+- Where does this donations go?
