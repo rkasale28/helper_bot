@@ -19,6 +19,11 @@ slots:
     type: text
     auto_fill: true
 
+actions:
+  - action_show_center
+  - action_show_requirements
+  - action_show_requirements_commodity
+
 responses:
   utter_greet:
   - text: "Hey! How can I help you?"
