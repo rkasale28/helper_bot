@@ -1,13 +1,35 @@
 <html>
-  <head>
-    <title>CHATBOT</title>
-  </head>
-  <body>
-    <h1>CHATBOT</h1>
+
+<head>
+  <title>Helper Bot</title>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700%7CAllura" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/common_css.css')}}">
+</head>
+
+<body style="font-family: Poppins;">
+  <header>
+    <h3>Helper Bot</h3>
+    <nav class="nav float-right"></nav>
+  </header>
+
+  <div class="wrapper container-fluid">
+    <div class="row justify-content-start" style="margin-left:0px">
+      <div class="you h5">Hello..!</div>
+    </div>
+    <div class="row justify-content-end" style="margin-right: 0px;">
+      <div class="bot h5">{{val}}</div>
+    </div>
+  </div>
+
+  <footer>
     <form>
-      <label for="text">You:</label><br>
-      <input type="text" id="text" name="text"><br>
-      {{val}}
+      <input type="text" id="text" name="text" placeholder="Enter message...">
+      <input type="submit" value="Send" class="btn">
     </form>
-  </body>
+  </footer>
+</body>
+
 </html>
