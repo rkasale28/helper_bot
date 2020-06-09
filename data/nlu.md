@@ -11,16 +11,16 @@
 - see you later
 
 ## intent:find
-- Please find a help center in Mumbai
-- Can you find a help center in Mumbai?
-- Could you find a help center in Mumbai
-- Where is help center in Mumbai?
-- I want to know about the help center in Mumbai
-- Find a help center in Mumbai
-- Search for a help center in Mumbai
-- Please search a help center in Mumbai
-- Can you search a help center in Mumbai?
-- Could you search a help center in Mumbai
+- Please find a help center in [Mumbai](city)
+- Can you find a help center in [Mumbai](city)?
+- Could you find a help center in [Mumbai](city)
+- Where is help center in [Mumbai](city)?
+- I want to know about the help center in [Mumbai](city)
+- Find a help center in [Mumbai](city)
+- Search for a help center in [Mumbai](city)
+- Please search a help center in [Mumbai](city)
+- Can you search a help center in [Mumbai](city)?
+- Could you search a help center in [Mumbai](city)
 
 ## intent:requirements
 - What all is required as of now?
@@ -29,11 +29,11 @@
 - Please tell what all is needed
 
 ## intent:requirements_commodity
-- Is utensils required?
-- Should I donate utensils?
-- I have utensils. Is it required?
-- Is utensils needed?
-- I have utensils. Is it needed?
+- Is [utensils](commodity) required?
+- Should I donate [utensils](commodity)?
+- I have [utensils](commodity). Is it required?
+- Is [utensils](commodity) needed?
+- I have [utensils](commodity). Is it needed?
 
 ## intent:procedure
 - What should I do to donate?
