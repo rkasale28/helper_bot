@@ -1,11 +1,10 @@
 intents:
   - greet
   - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+  - find
+  - requirements
+  - procedure
+  - self
 
 responses:
   utter_greet:

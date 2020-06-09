@@ -24,13 +24,15 @@
 
 ## intent:requirements
 - What all is required as of now?
+- Please tell what all is required
+- What all is needed as of now?
+- Please tell what all is needed
+
+## intent:requirements_commodity
 - Is utensils required?
 - Should I donate utensils?
-- Please tell what all is required
 - I have utensils. Is it required?
-- What all is needed as of now?
 - Is utensils needed?
-- Please tell what all is needed
 - I have utensils. Is it needed?
 
 ## intent:procedure
