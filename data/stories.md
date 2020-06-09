@@ -17,6 +17,12 @@
 ## story #2
 * greet
   - utter_greet
+* self
+  - utter_self_information
+* procedure
+  - utter_procedure
+* requirements_commodity
+  - action_show_requirements_commodity
 * find
   - action_show_center
 * thanks
@@ -25,6 +31,36 @@
   - utter_goodbye
 
 ## story #3
+* greet
+  - utter_greet
+* find
+  - action_show_center
+* thanks
+  - utter_thanks
+* goodbye
+  - utter_goodbye
+
+## story #4
+* greet
+  - utter_greet
+* requirements_commodity
+  - action_show_requirements_commodity
+* thanks
+  - utter_thanks
+* goodbye
+  - utter_goodbye
+
+## story #5
+* greet
+  - utter_greet
+* requirements
+  - action_show_requirements
+* thanks
+  - utter_thanks
+* goodbye
+  - utter_goodbye
+
+## story #6
 * greet
   - utter_greet
 * requirements_commodity
@@ -36,7 +72,7 @@
 * goodbye
   - utter_goodbye
 
-## story #4
+## story #7
 * greet
   - utter_greet
 * requirements
@@ -48,7 +84,7 @@
 * goodbye
   - utter_goodbye
 
-## story #5
+## story #8
 * greet
   - utter_greet
 * self

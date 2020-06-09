@@ -23,7 +23,8 @@ commodities={
     "utensils": False,
     "clothes": True,
     "readymade food packets": True,
-    "school supplies": True
+    "school supplies": True,
+    "medicines": True
 }
 
 class ActionShowCenter(Action):

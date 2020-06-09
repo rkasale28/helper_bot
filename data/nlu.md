@@ -16,11 +16,11 @@
 - Could you find a help center in [Mumbai](city)
 - Where is help center in [Mumbai](city)?
 - I want to know about the help center in [Mumbai](city)
-- Find a help center in [Mumbai](city)
-- Search for a help center in [Mumbai](city)
-- Please search a help center in [Mumbai](city)
+- Find a help center in [Pune](city)
+- Search for a help center in [Navi Mumbai](city)
+- Please search a help center in [Thane](city)
 - Can you search a help center in [Mumbai](city)?
-- Could you search a help center in [Mumbai](city)
+- Could you search a help center in [Thane](city)
 
 ## intent:requirements
 - What all is required as of now?
@@ -34,10 +34,13 @@
 
 ## intent:requirements_commodity
 - Is [utensils](commodity) required?
-- Should I donate [utensils](commodity)?
-- I have [utensils](commodity). Is it required?
-- Is [utensils](commodity) needed?
-- I have [utensils](commodity). Is it needed?
+- Should I donate [clothes](commodity)?
+- I have [school supplies](commodity). Is it required?
+- Is [medicines](commodity) needed?
+- I have [readymade food packets](commodity). Is it needed?
+- Do they require [clothes](commodity)?
+- Do they need [school supplies](commodity)
+- Is [readymade food packets](commodity) necessary?
 
 ## intent:procedure
 - What should I do to donate?
@@ -45,6 +48,7 @@
 - Tell me the procedure to donate
 - I am eager to donate. Please tell me what to do.
 - I want to donate. Please tell me what to do.
+- What should I do?
 
 ## intent:self
 - Who are you?
