@@ -11,6 +11,14 @@ entities:
   - city
   - commodity
 
+slots:
+  city:
+    type: text
+    auto_fill: true
+  commodity:
+    type: text
+    auto_fill: true
+
 responses:
   utter_greet:
   - text: "Hey! How can I help you?"
