@@ -27,6 +27,10 @@
 - Please tell what all is required
 - What all is needed as of now?
 - Please tell what all is needed
+- What all is required?
+- What all is needed?
+- List all commodities that are required
+- List all commodities that are needed
 
 ## intent:requirements_commodity
 - Is [utensils](commodity) required?
@@ -48,3 +52,10 @@
 - How do you help?
 - Where is this help provided?
 - Where does this donations go?
+
+## intent:thanks
+- Thanks
+- Thank you
+- Thank you so much
+- Ty
+- Tysm

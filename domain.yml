@@ -3,6 +3,7 @@ intents:
   - goodbye
   - find
   - requirements
+  - requirements_commodity
   - procedure
   - self
   - thanks
@@ -35,7 +36,7 @@ responses:
   - text: "Nothing Much. Just visit our center in your city. You can donate your commodities there."
 
   utter_self_information:
-  - text: "We act as an mediator between the needy and the donor. We always ensure that every needy gets satisfied."
+  - text: "We act as an mediator between the needy and the donor.\nWe always ensure that every needy gets satisfied.\nWe have helped the sufferers of Kolhapur, Satara and Sangli."
 
   utter_thanks:
   - text: "My pleasure :)"

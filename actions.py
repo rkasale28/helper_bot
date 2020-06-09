@@ -20,7 +20,7 @@ centers={
 }
 
 commodities={
-    "utensils": True,
+    "utensils": False,
     "clothes": True,
     "readymade food packets": True,
     "school supplies": True
@@ -36,7 +36,7 @@ class ActionShowCenter(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         city=tracker.get_slot("city")
-        center=centers.get(city)
+        center=centers.get(city.lower())
 
         if center is None:
             output = "Sorry...! We don't have center in {}. But, we will definitely try to build a center there.".format(city)
@@ -56,12 +56,14 @@ class ActionShowRequirements(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        required=[k for k,v in commodities.items() if v=True]
+        required=[k for k,v in commodities.items() if v==True]
 
         output=''
 
         for i in required:
-            output+=i+"<br>"
+            for j in i.split():
+                output+=j.capitalize()+" "
+            output+="\n"
 
         dispatcher.utter_message(text=output)
 
@@ -76,8 +78,8 @@ class ActionShowCommodity(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        commodity=tracker.get_slot("commodiy")
-        result=commodities.get(commodity)
+        commodity=tracker.get_slot("commodity")
+        result=commodities.get(commodity.lower())
 
         if result is None or not result:
             output = "No. Thank you for asking, but {} is not required".format(commodity)
