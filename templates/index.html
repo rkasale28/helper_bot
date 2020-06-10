@@ -5,17 +5,13 @@
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="{{ url_for('static',filename='js/common_js.js')}}"></script>
+  
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700%7CAllura" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/common_css.css')}}">
-  <script>
-    function scrollDown(){
-    var messageBody = document.querySelector('#messageBody');
-    messageBody.scrollTop = messageBody.scrollHeight - messageBody.clientHeight;
-    }
-  </script>
 </head>
 
-<body style="font-family: Poppins;" onload="scrollDown()">
+<body style="font-family: Poppins;">
   <header>
     <nav class="navbar navbar-expand-lg">
       <span class="navbar-brand mb-0 h1">Helper Bot</span>
@@ -45,7 +41,7 @@
   </div>
 
   <footer>
-    <form action="/" method="POST">
+    <form id="myform" method="POST" action="/homepage">
       <input type="text" id="text" name="text" placeholder="Enter message...">
       <input type="submit" value="Send" class="btn">
     </form>

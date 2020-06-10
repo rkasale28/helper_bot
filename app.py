@@ -44,7 +44,7 @@ def signup():
     db.session.commit()
 
     login_user(user)
-    return redirect('/')
+    return redirect('/homepage')
   else:
     return render_template('signup.html')
 
@@ -61,7 +61,7 @@ def login():
       return redirect('/signin')
     else:
       login_user(user)
-      return redirect('/')
+      return redirect('/homepage')
   else:
     return render_template('login.html')
 
@@ -70,7 +70,7 @@ def logout():
     logout_user()
     return redirect('/signin')
 
-@app.route('/', methods = ['POST', 'GET'])
+@app.route('/homepage', methods = ['POST', 'GET'])
 @login_required
 def index():
     if request.method == 'POST':
@@ -79,7 +79,7 @@ def index():
       headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
       res = requests.post('http://localhost:5005/webhooks/rest/webhook', data= data, headers = headers)
       res = res.json()
-      return redirect('/')
+      return redirect('/homepage')
     else:
       res = requests.get('http://localhost:5005/conversations/{}/tracker'.format(current_user.username))
       res=res.json()
