@@ -13,17 +13,17 @@ class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(10), unique=True)
     password = db.Column(db.String(255))
-    tourist_id = db.Column(db.Integer,db.ForeignKey('tourist.id'))
+    helper_id = db.Column(db.Integer,db.ForeignKey('helper.id'))
     active = db.Column(db.Boolean())
     roles = db.relationship('Role', secondary=roles_users,
             backref=db.backref('users', lazy='dynamic'))
 
-class Tourist(db.Model):
+class Helper(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     firstname = db.Column(db.String(25), unique=True)
     lastname = db.Column(db.String(25), unique=True)
     email = db.Column(db.String(50), unique=True)
-    user=db.relationship('User',backref='tourist',uselist=False)
+    user=db.relationship('User',backref='helper',uselist=False)
 
 class Role(db.Model, RoleMixin):
     id = db.Column(db.Integer(), primary_key=True)

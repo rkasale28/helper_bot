@@ -1,7 +1,7 @@
 from flask import Flask, redirect, url_for, request, render_template, flash
 from flask_migrate import MigrateCommand
 from flask_script import Manager
-from models import db,migrate,user_datastore,Tourist,User,Role
+from models import db,migrate,user_datastore,Helper,User,Role
 from flask_security.utils import hash_password,verify_password,login_user,logout_user
 from flask_security import Security,current_user,login_required
 import requests
@@ -11,7 +11,7 @@ def create_app():
   app = Flask(__name__)
   context_set = ""
   app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-  app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://postgres:postgres@127.0.0.1:5432/tourist'
+  app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://postgres:postgres@127.0.0.1:5432/helper'
   app.config['SECRET_KEY']='ROHIT'
   app.config['SECURITY_PASSWORD_SALT']='ROHIT'
   app.config['SECURITY_LOGIN_USER_TEMPLATE']='login.html'
@@ -33,14 +33,14 @@ def signup():
     mail=request.form['mail']
     uname=request.form['uname']
     pwd=hash_password(request.form['pwd'])
-    role=Role.query.get_or_404(2)
+    role=Role.query.get_or_404(1)
 
     user_datastore.create_user(username=uname,password=pwd,roles=[role])
     db.session.commit()
         
     user = User.query.filter_by(username=uname).first()
-    newtourist=Tourist(firstname=fname, lastname=lname, email=mail, user=user)
-    db.session.add(newtourist)
+    newhelper=Helper(firstname=fname, lastname=lname, email=mail, user=user)
+    db.session.add(newhelper)
     db.session.commit()
 
     login_user(user)

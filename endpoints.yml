@@ -29,7 +29,7 @@ tracker_store:
    type: SQL
    dialect: "postgresql"
    url: ""
-   db: "tourist"
+   db: "helper"
    username: "postgres"
    password: "postgres"
 
