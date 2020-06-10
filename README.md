@@ -3,7 +3,7 @@
 
 In August 2019, floods ravaged the districts of Kolhapur, Sangli and Satara. The main problem began after the floods. The essentials including clothes, utensils were flown away. The list even included school supplies.
 
-For dealing with this, many helping hands came forward, from all over Maharashtra. These helping included sweepers to actors, children to senior citizens.
+For dealing with this, many helping hands came forward, from all over Maharashtra. These helping hands included sweepers to actors, children to senior citizens.
 
 But, the problem was with communication. The information regarding collection centers and which commodities is required needed to be communicated to the donors. This communication was done either through news channels and the social media platforms. Therefore, there was no centralized platform as such.
 
