@@ -48,7 +48,7 @@ def signup():
   else:
     return render_template('signup.html')
 
-@app.route('/login', methods = ['POST', 'GET'])
+@app.route('/signin', methods = ['POST', 'GET'])
 def login():
   if (request.method=='POST'):
     uname=request.form['uname']
@@ -58,32 +58,39 @@ def login():
     
     if not user or not verify_password(pwd, user.password):
       flash('Please check your login details and try again.')
-      return redirect('/login')
+      return redirect('/signin')
     else:
       login_user(user)
       return redirect('/')
   else:
     return render_template('login.html')
 
-@app.route('/logout')
-@login_required
+@app.route('/signout')
 def logout():
     logout_user()
-    return redirect('/login')
+    return redirect('/signin')
 
 @app.route('/', methods = ['POST', 'GET'])
+@login_required
 def index():
     if request.method == 'POST':
       val = request.form['text']
-      data = json.dumps({"sender": "Rasa","message": val})
+      data = json.dumps({"sender": current_user.username,"message": val})
       headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
       res = requests.post('http://localhost:5005/webhooks/rest/webhook', data= data, headers = headers)
       res = res.json()
-      val = res[0]['text']
-      val = val.replace("\n","<br>")
-      return render_template('index.html', val=val)
+      return redirect('/')
     else:
-      return render_template('index.html', val='Hello')
+      res = requests.get('http://localhost:5005/conversations/{}/tracker'.format(current_user.username))
+      res=res.json()
+      list=[]
+      for i in res['events']:
+        if (i['event']=='user' or i['event']=='bot'):
+          t=i['text']
+          t="<br />".join(t.split("\n"))
+          list.append({'event':i['event'],'text':t})
+      
+      return render_template('index.html', list=list)
 
 
 if __name__ == '__main__':
